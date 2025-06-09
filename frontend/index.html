@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MedBot - Simulador de Paciente</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <div id="paciente_container">
+      <div class="redondo">
+        <i class="fa-solid fa-hospital-user icon_class"></i>
+      </div>
+      <div class="paciente_box">
+        <div id="img_paciente">
+          <img src="/images/homem_icon.png" alt="Imagem do Paciente">
+        </div>
+        <div id="ficha">
+          <p><strong>Ficha do Paciente</strong></p>
+          <div class="linha_horizontal"></div>
+          <p><strong>Nome:</strong> Alefe <br> <strong>Sexo:</strong> Masculino <br> <strong>Idade:</strong> 18 <br></p>
+        </div>
+        <div id="historico">
+          <p><strong>Histórico</strong></p>
+          <div class="linha_horizontal"></div>
+          <p>Possui Asma.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-container">
+      <div class="top-bar"></div>
+      <div class="redondo">
+        <i class="fa-solid fa-hospital icon_class"></i>
+      </div>
+      <div id="chatbox"></div>
+      <div class="input-group">
+        <input type="text" id="userInput" placeholder="Pergunte ao paciente..." />
+        <button onclick="mostrarDiagnostico()">Mostrar Diagnóstico</button>
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+:root {
+  --cor-fundo: #f4f7f8;
+  --cor-primaria: #1976D2;
+  --cor-secundaria: #64B5F6;
+  --cor-destaque: #FF7043;
+  --cor-neutra: #ffffff;
+  --cor-texto: #333333;
+  --cor-borda: #cccccc;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f4f7f8, #dceaf2);
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 0;
+}
+
+p {
+  color: var(--cor-texto);
+}
+
+.layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+#paciente_container,
+.chat-container {
+  flex: 1 1 400px;
+  min-width: 300px;
+  background: var(--cor-neutra);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+#chatbox {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.redondo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-primaria);
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#img_paciente {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid var(--cor-borda);
+  margin-top: 25px;
+  transition: transform 0.2 ease, box-shadow 0.2s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.paciente_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 470px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon_class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--cor-primaria);
+  font-size: 30px;
+}
+
+#ficha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 6px;
+  width: 75%;
+  height: 120px;
+  margin-top: 30px;
+  border: 1px solid var(--cor-primaria);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ficha > p {
+  text-align: left;
+  margin: 5px;
+}
+
+.linha_horizontal {
+  width: 100%;
+  height: 1.3px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+#historico {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 6px;
+  width: 85%;
+  height: 70px;
+  margin-top: 40px;
+  border: 1px solid var(--cor-primaria);
+  border-left: 4px solid var(--cor-secundaria);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#historico > p {
+  margin: 0px;
+}
+
+#diagnostico {
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.user {
+  align-self: flex-end;
+  max-width: 70%;
+  background-color: #dcf8c6b3;
+  border-radius: 15px;
+  word-wrap: break-word;
+  white-space: normal;
+  color: black;
+  margin: 5px 0;
+  padding: 12px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.bot {
+  align-self: flex-start;
+  max-width: 70%;
+  background-color: #f1f0f0;
+  border-radius: 15px;
+  word-wrap: break-word;
+  white-space: normal;
+  color: black;
+  margin: 5px 0;
+  padding: 12px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.input-group {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  font-size: 12.5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 3px var(--cor-primaria);
+}
+
+button {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0040c1;
+}
+
+#img_paciente:hover,
+#ficha:hover,
+#historico:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
