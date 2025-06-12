@@ -28,7 +28,9 @@ cd medbot-simulador
 
 ### 2. Instale as dependências Python
 
+```bash
 pip install fastapi requests python-dotenv uvicorn
+```
 
 ### 3. Configure a chave API
 
@@ -36,8 +38,10 @@ Em main.py, cole sua chave GEMINI API (linha 9).
 
 ### 4. Execute o Servidor
 
+```bash
 uvicorn main:app --reload
 (certifique-se de estar no diretório correto, para executar o servidor)
+```
 
 ### 5.Tudo Pronto!
 
