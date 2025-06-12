@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_KEY = "AIzaSyChxGKdG_AGcYtHoHpN52YZpL_RL0XNDVQ"
+API_KEY = "SUA_CHAVE_AQUI"
 MODEL = "gemini-2.0-flash"
 
 app = FastAPI()
